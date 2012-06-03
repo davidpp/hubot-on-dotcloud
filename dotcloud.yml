@@ -1,0 +1,10 @@
+
+data:
+  type: redis
+
+hubot:
+  type: custom
+  buildscript: builder
+  process: ~/run
+  node_version: v0.6.5
+  my_hubot: rambot

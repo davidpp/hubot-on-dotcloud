@@ -54,7 +54,7 @@ EOF
 cat > ~/run << EOF
 #!/bin/sh
 
-cd ~/$HUBOT && bin/hubot --adapter irc --name $HUBOT
+cd ~/$HUBOT && bin/hubot --adapter irc --name $HUBOT --alias '/'
 EOF
 
 chmod +x ~/run

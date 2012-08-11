@@ -10,3 +10,5 @@ hubot:
   hubot:
     name: rambot
     version: 2.2.1
+  ports:
+    hubot: http

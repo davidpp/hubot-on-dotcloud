@@ -41,6 +41,7 @@ chmod +x ~/$HUBOT/bin/hubot
 cat > ~/profile << EOF
 ## Redis Stuff
 export REDISTOGO_URL=\$DOTCLOUD_DATA_REDIS_URL
+export PORT=\$PORT_HUBOT
 
 ## hubot-irc stuff
 export HUBOT_IRC_SERVER="irc.freenode.net"

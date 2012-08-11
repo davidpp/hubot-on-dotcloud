@@ -9,6 +9,6 @@ hubot:
   node_version: v0.6.19
   hubot:
     name: rambot
-    version: 2.2.1
+    version: 2.3.2
   ports:
     hubot: http

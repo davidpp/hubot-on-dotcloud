@@ -48,6 +48,7 @@ export HUBOT_IRC_SERVER="irc.freenode.net"
 export HUBOT_IRC_ROOMS="#hubot,#hubot-irc"
 export HUBOT_IRC_PASSWORD=""
 export HUBOT_IRC_NICK="$HUBOT"
+export HUBOT_IRC_UNFLOOD="false"
 # export HUBOT_LOG_LEVEL="debug"  # This helps to see what Hubot is doing
 # export HUBOT_IRC_DEBUG="true"
 EOF

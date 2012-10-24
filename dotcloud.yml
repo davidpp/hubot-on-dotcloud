@@ -8,7 +8,7 @@ hubot:
   process: ~/run
   node_version: v0.6.19
   hubot:
-    name: rambot
-    version: 2.3.2
+    name: hubot
+    version: 2.3.4
   ports:
     hubot: tcp

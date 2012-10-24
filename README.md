@@ -13,11 +13,16 @@ $ git clone git://github.com/marsam/hubot-on-dotcloud.git
 Update hubot configuration in _dotcloud.yml_:
 
 ```yaml
-hubot:
-  name: skynet     # Name of your hubot. "hubot" by default (optional)
-  version: 2.3.2   # Version of hubot. latest version by default (optional)
-  ports:
-    hubot: tcp     # Used for hubot routes
+data:
+  type: redis        # Used for hubot brain.
+
+hubot:               # Hubot service
+  # cropped
+  hubot:
+    name: skynet     # Name of hubot. "hubot" by default (optional)
+    version: 2.3.2   # Version of hubot. latest version by default (optional)
+    ports:
+      hubot: tcp     # Used for hubot routes
 ```
 
 Customize the builder, you can add environment variables by your hubot requirements.

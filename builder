@@ -2,7 +2,7 @@
 
 CODEROOT=$PWD
 
-HUBOT="$SERVICE_HUBOT_NAME"
+HUBOT=${SERVICE_HUBOT_NAME:="hubot"}
 
 node_root=/opt/node
 
@@ -31,7 +31,12 @@ create_hubot() {
 
 echo "Installing hubot"
 npm install -g coffee-script
-npm install -g hubot@$SERVICE_HUBOT_VERSION
+
+if [ -n "$SERVICE_HUBOT_VERSION" ]; then
+  npm install -g hubot@$SERVICE_HUBOT_VERSION
+else
+  npm install -g hubot
+fi
 
 echo "Creating $HUBOT"
 create_hubot

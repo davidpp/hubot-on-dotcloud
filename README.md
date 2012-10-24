@@ -4,14 +4,26 @@
 
 ## Usage
 
-1. Clone
+Clone:
 
-    $ git clone git://github.com/marsam/hubot-on-dotcloud.git
+```sh
+$ git clone git://github.com/marsam/hubot-on-dotcloud.git
+```
 
-2. Change the name of your hubot in _dotcloud.yml_
+Update hubot configuration in _dotcloud.yml_:
 
-3. Customize the builder
+```yaml
+hubot:
+  name: skynet     # Name of your hubot. "hubot" by default (optional)
+  version: 2.3.2   # Version of hubot. latest version by default (optional)
+  ports:
+    hubot: tcp     # Used for hubot routes
+```
 
-4. Dotcloud magic
+Customize the builder, you can add environment variables by your hubot requirements.
 
-    $ dotcloud push hubot hubot-on-dotcloud
+Dotcloud magic
+
+```sh
+$ dotcloud push hubot hubot-on-dotcloud
+```

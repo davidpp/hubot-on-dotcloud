@@ -24,7 +24,7 @@ create_hubot() {
   cd ~/$HUBOT
 
   # Adding hubot-irc. If there is a better way let me know
-  sed -i -e 's/"dependencies": {/"dependencies": {\n"hubot-irc": ">= 0.0.6",/' package.json
+  sed -i -e 's/"dependencies": {/"dependencies": {\n"hubot-hipchat": ">= 1.1.1",/' package.json
   npm update
 }
 
@@ -48,20 +48,17 @@ cat > ~/profile << EOF
 export REDISTOGO_URL=\$DOTCLOUD_DATA_REDIS_URL
 export PORT=\$PORT_HUBOT
 
-## hubot-irc stuff
-export HUBOT_IRC_SERVER="irc.freenode.net"
-export HUBOT_IRC_ROOMS="#hubot,#hubot-irc"
-export HUBOT_IRC_PASSWORD=""
-export HUBOT_IRC_NICK="$HUBOT"
-export HUBOT_IRC_UNFLOOD="false"
+## hubot-hipchat stuff
+export HUBOT_HIPCHAT_JID=""
+export HUBOT_HIPCHAT_PASSWORD=""
+
 # export HUBOT_LOG_LEVEL="debug"  # This helps to see what Hubot is doing
-# export HUBOT_IRC_DEBUG="true"
 EOF
 
 cat > ~/run << EOF
 #!/bin/sh
 
-cd ~/$HUBOT && bin/hubot --adapter irc --name $HUBOT --alias '/'
+cd ~/$HUBOT && bin/hubot --adapter hipchat --name $HUBOT --alias '/'
 EOF
 
 chmod +x ~/run

@@ -1,13 +1,13 @@
-# Hubot on dotcloud
+# Hubot-hipchat on dotcloud 
 
-[hubot](http://hubot.github.com/) with [irc-adapter](https://github.com/nandub/hubot-irc) on [Dotcloud](https://www.dotcloud.com/)
+[hubot](http://hubot.github.com/) with [hipchat](https://github.com/nandub/hubot-irc) on [Dotcloud](https://www.dotcloud.com/) forked from [marsam](https://github.com/marsam/hubot-on-dotcloud)
 
 ## Usage
 
 Clone:
 
 ```sh
-$ git clone git://github.com/marsam/hubot-on-dotcloud.git
+$ git clone git://github.com/davidpaquet/hubot-on-dotcloud.git
 ```
 
 Update hubot configuration in _dotcloud.yml_:
